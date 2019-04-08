@@ -7,3 +7,5 @@
 #include <iostream>
 #include <locale.h>
 #include <Windows.h>
+#include <fstream>
+#include <ctype.h>

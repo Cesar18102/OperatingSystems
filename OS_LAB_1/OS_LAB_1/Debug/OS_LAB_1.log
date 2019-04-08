@@ -1,8 +1,10 @@
-﻿Build started 08.04.2019 2:21:40.
+﻿Build started 08.04.2019 5:02:28.
      1>Project "D:\!!!OLEG\!!!WORK\GitHubProjects\OperatingSystems\OS_LAB_1\OS_LAB_1\OS_LAB_1.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          D:\!!!OLEG\VS2012\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\OS_LAB_1.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt OS_LAB_1.cpp
          OS_LAB_1.cpp
+     1>d:\!!!oleg\!!!work\githubprojects\operatingsystems\os_lab_1\os_lab_1\os_lab_1.cpp(98): warning C4244: 'initializing' : conversion from 'std::streamoff' to 'int', possible loss of data
+     1>d:\!!!oleg\!!!work\githubprojects\operatingsystems\os_lab_1\os_lab_1\os_lab_1.cpp(113): warning C4800: 'BOOL' : forcing value to bool 'true' or 'false' (performance warning)
        Link:
          D:\!!!OLEG\VS2012\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\!!!OLEG\!!!WORK\GitHubProjects\OperatingSystems\OS_LAB_1\Debug\OS_LAB_1.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\!!!OLEG\!!!WORK\GitHubProjects\OperatingSystems\OS_LAB_1\Debug\OS_LAB_1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\!!!OLEG\!!!WORK\GitHubProjects\OperatingSystems\OS_LAB_1\Debug\OS_LAB_1.lib" /MACHINE:X86 Debug\OS_LAB_1.obj
          Debug\stdafx.obj
@@ -11,4 +13,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.30
+Time Elapsed 00:00:00.54
