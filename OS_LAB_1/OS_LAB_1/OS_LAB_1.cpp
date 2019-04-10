@@ -88,6 +88,20 @@ void Join(TCHAR** pieces, TCHAR delim, TCHAR* str, int piece_count, int sumlen) 
 	str[sumlen] = _T('\0');
 }
 
+bool isTextUnicode(TCHAR* str) {//FEFF
+								//FFEF
+	byte C1 = (byte)str[0];
+	byte C2 = (byte)str[1];
+
+	byte F = 0xFF;
+	byte E = 0xFE;
+
+	bool B1 = C1 == E && C2 == F;
+	bool B2 = C1 == F && C2 == E;
+
+	return B1 || B2;
+}
+
 void LastTask(TCHAR* filename, TCHAR delim) {
 
 	ifstr istr;
@@ -110,7 +124,7 @@ void LastTask(TCHAR* filename, TCHAR delim) {
 
 	int enc = 0;
 	char* ENC = getDefaultEncoding();
-	bool isUnicode = IsTextUnicode(input, fileSize * sizeof(TCHAR), &enc);
+	bool isUnicode = IsTextUnicode(input, fileSize, &enc);
 
 	if(isUnicode && ENC == ASCII)
 		WideCharToMultiByte(CP_ACP, 0, (wchar_t*)input, fileSize, (char*)str, fileSize, NULL, NULL);
