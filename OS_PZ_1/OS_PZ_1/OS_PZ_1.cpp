@@ -12,13 +12,18 @@
 #define strend '\0'
 #endif
 
+bool isUnicodeDefault() {
+
+	return sizeof(TCHAR) == 2;
+}
+
 TCHAR* StrToGeneral(void* S, size_t L) {
 
 	TCHAR* S_ = new TCHAR[L];
 	int R = -1;
 
 	bool StrUnicode = IsTextUnicode(S, L, &R);
-	bool DefUnicode = sizeof(TCHAR) == 2;
+	bool DefUnicode = isUnicodeDefault();
 
 	if(StrUnicode && !DefUnicode) 
 		WideCharToMultiByte(CP_ACP, 0, (wchar_t*)S, L, (char*)S_, L, NULL, NULL);
@@ -129,7 +134,11 @@ void Task1() {
 	TCHAR* Path1 = new TCHAR[MaxLen];
 	TCHAR* Path2 = new TCHAR[MaxLen];
 
+	print("%s\n\n", _T("********************TASK1********************"));
+	print("%s", _T("Input first path: "));
 	read("%s", Path1);
+
+	print("%s", _T("Input second path: "));
 	read("%s", Path2);
 
 	size_t L1 = strlen(Path1, MaxLen);
@@ -144,12 +153,116 @@ void Task1() {
 	Path2 = SlashTrim(Path2, L2);
 
 	int Comparsion = StrCompare(Path1, L1, Path2, L2);
-	print("%s\n", Comparsion == 0? _T("PATHES ARE EQUAL") : _T("PATHES ARE DIFFERENT"));
+	print("%s\n\n", Comparsion == 0? _T("PATHES ARE EQUAL") : _T("PATHES ARE DIFFERENT"));
+	print("%s\n\n", _T("********************TASK1********************"));
+}
+
+void Task2() {
+
+	const int MaxLength = 256;
+	bool Unicode = isUnicodeDefault();
+
+	print("%s\n\n", _T("********************TASK2********************"));
+	print("%s\n", Unicode? _T("Using UNICODE") : _T("Using ASCII"));
+
+	int count;
+	print("%s", _T("Input count of strings: "));
+	read("%d", &count);
+
+	if(Unicode) {
+
+		wchar_t** strs = new wchar_t* [count];
+
+		for(int i = 0; i < count; i++) {
+
+			print("%s", _T("Input a string: "));
+			strs[i] = new wchar_t[MaxLength];
+			read("%s", strs[i]);
+		}
+
+		print("%s", "\n");
+
+		for(int i = 0; i < count - 1; i++)
+			for(int j = 0; j < count - 1; j++)
+				if(_wcsicmp(strs[j], strs[j + 1]) > 0) {
+
+					wchar_t* temp = strs[j];
+					strs[j] = strs[j + 1];
+					strs[j + 1] = temp;
+				}
+
+		for(int i = 0; i < count; i++)
+			print("%s\n", strs[i]);
+
+	} else {
+
+		char** strs = new char* [count];
+
+		for(int i = 0; i < count; i++) {
+
+			print("%s", _T("Input a string: "));
+			strs[i] = new char[MaxLength];
+			read("%s", strs[i]);
+		}
+
+		print("%s", "\n");
+
+		for(int i = 0; i < count - 1; i++)
+			for(int j = 0; j < count - 1; j++)
+				if(_stricmp(strs[j], strs[j + 1]) > 0) {
+
+					char* temp = strs[j];
+					strs[j] = strs[j + 1];
+					strs[j + 1] = temp;
+				}
+
+		for(int i = 0; i < count; i++)
+			print("%s\n", strs[i]);
+	}
+
+	print("\n%s\n\n", _T("********************TASK2********************"));
+}
+
+void Task3() {
+
+	const int MaxLength = 256;
+	print("%s\n\n", _T("********************TASK3********************"));
+
+	int count;
+	print("%s", _T("Input count of strings: "));
+	read("%d", &count);
+
+	TCHAR** strs = new TCHAR* [count];
+
+	for(int i = 0; i < count; i++) {
+
+		print("%s", _T("Input a string: "));
+		strs[i] = new TCHAR[MaxLength];
+		read("%s", strs[i]);
+	}
+
+	print("%s", "\n");
+
+	for(int i = 0; i < count - 1; i++)
+		for(int j = 0; j < count - 1; j++)
+			if(compare(strs[j], strs[j + 1]) > 0) {
+
+				TCHAR* temp = strs[j];
+				strs[j] = strs[j + 1];
+				strs[j + 1] = temp;
+			}
+
+	for(int i = 0; i < count; i++)
+		print("%s\n", strs[i]);
+
+	print("\n%s\n", _T("********************TASK3********************"));
 }
 
 int _tmain(int argc, _TCHAR* argv[]) {
 
 	Task1();
+	Task2();
+	Task3();
 
 	system("pause");
 	return 0;

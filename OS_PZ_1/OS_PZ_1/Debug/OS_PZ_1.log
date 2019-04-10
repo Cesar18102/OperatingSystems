@@ -1,14 +1,14 @@
-﻿Build started 10.04.2019 21:35:54.
+﻿Build started 11.04.2019 0:44:40.
      1>Project "D:\!!!OLEG\!!!WORK\GitHubProjects\OperatingSystems\OS_PZ_1\OS_PZ_1\OS_PZ_1.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          D:\!!!OLEG\VS2012\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _CRT_SECURE_NO_WARNINGS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\OS_PZ_1.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt OS_PZ_1.cpp
          OS_PZ_1.cpp
-     1>d:\!!!oleg\!!!work\githubprojects\operatingsystems\os_pz_1\os_pz_1\os_pz_1.cpp(20): warning C4800: 'BOOL' : forcing value to bool 'true' or 'false' (performance warning)
-     1>d:\!!!oleg\!!!work\githubprojects\operatingsystems\os_pz_1\os_pz_1\os_pz_1.cpp(44): warning C4018: '<=' : signed/unsigned mismatch
-     1>d:\!!!oleg\!!!work\githubprojects\operatingsystems\os_pz_1\os_pz_1\os_pz_1.cpp(47): warning C4018: '<' : signed/unsigned mismatch
-     1>d:\!!!oleg\!!!work\githubprojects\operatingsystems\os_pz_1\os_pz_1\os_pz_1.cpp(73): warning C4018: '<' : signed/unsigned mismatch
-     1>d:\!!!oleg\!!!work\githubprojects\operatingsystems\os_pz_1\os_pz_1\os_pz_1.cpp(76): warning C4018: '<' : signed/unsigned mismatch
-     1>d:\!!!oleg\!!!work\githubprojects\operatingsystems\os_pz_1\os_pz_1\os_pz_1.cpp(84): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\!!!oleg\!!!work\githubprojects\operatingsystems\os_pz_1\os_pz_1\os_pz_1.cpp(25): warning C4800: 'BOOL' : forcing value to bool 'true' or 'false' (performance warning)
+     1>d:\!!!oleg\!!!work\githubprojects\operatingsystems\os_pz_1\os_pz_1\os_pz_1.cpp(49): warning C4018: '<=' : signed/unsigned mismatch
+     1>d:\!!!oleg\!!!work\githubprojects\operatingsystems\os_pz_1\os_pz_1\os_pz_1.cpp(52): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\!!!oleg\!!!work\githubprojects\operatingsystems\os_pz_1\os_pz_1\os_pz_1.cpp(78): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\!!!oleg\!!!work\githubprojects\operatingsystems\os_pz_1\os_pz_1\os_pz_1.cpp(81): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\!!!oleg\!!!work\githubprojects\operatingsystems\os_pz_1\os_pz_1\os_pz_1.cpp(89): warning C4018: '<' : signed/unsigned mismatch
        Link:
          D:\!!!OLEG\VS2012\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\!!!OLEG\!!!WORK\GitHubProjects\OperatingSystems\OS_PZ_1\Debug\OS_PZ_1.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\!!!OLEG\!!!WORK\GitHubProjects\OperatingSystems\OS_PZ_1\Debug\OS_PZ_1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\!!!OLEG\!!!WORK\GitHubProjects\OperatingSystems\OS_PZ_1\Debug\OS_PZ_1.lib" /MACHINE:X86 Debug\OS_PZ_1.obj
          Debug\stdafx.obj
@@ -17,4 +17,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.71
+Time Elapsed 00:00:00.38
