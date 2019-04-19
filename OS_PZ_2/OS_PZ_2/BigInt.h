@@ -2,12 +2,14 @@
 class BigInt
 {
 	public:
-		BigInt(short* digits, long long len);
+		BigInt(short* digits, long long len, bool minus);
+		BigInt();
 		~BigInt(void);
 		void print();
 
 		BigInt operator + (BigInt B);
 		BigInt operator - (BigInt B);
+		BigInt operator - ();
 		BigInt operator * (BigInt B);
 		BigInt operator / (BigInt B);
 		static BigInt ReadBigInt();
@@ -17,4 +19,5 @@ class BigInt
 	private:
 		short* digits;
 		int digitsCount;
+		bool minus;
 };
