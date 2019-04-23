@@ -1,0 +1,20 @@
+﻿Build started 23.04.2019 23:50:05.
+     1>Project "C:\Users\Олег\Documents\Visual Studio 2012\Projects\OperatingSystems\OS_PZ_2_Static\OS_PZ_2_Static\OS_PZ_2_Static.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         D:\!!!OLEG\Software\VS2012\VC\bin\CL.exe /c /I"C:\Users\Олег\Documents\Visual Studio 2012\Projects\OS_PZ_2_Static\Debug" /AI"C:\Users\Олег\Documents\Visual Studio 2012\Projects\OS_PZ_2_Static\Debug" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\OS_PZ_2_Static.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         D:\!!!OLEG\Software\VS2012\VC\bin\CL.exe /c /I"C:\Users\Олег\Documents\Visual Studio 2012\Projects\OS_PZ_2_Static\Debug" /AI"C:\Users\Олег\Documents\Visual Studio 2012\Projects\OS_PZ_2_Static\Debug" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\OS_PZ_2_Static.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt OS_PZ_2_Static.cpp
+         OS_PZ_2_Static.cpp
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.0\bin\x86\rc.exe /D _UNICODE /D UNICODE /l"0x0409" /nologo /fo"Debug\OS_PZ_2_Static.res" OS_PZ_2_Static.rc 
+       Link:
+         D:\!!!OLEG\Software\VS2012\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Олег\Documents\Visual Studio 2012\Projects\OperatingSystems\OS_PZ_2_Static\Debug\OS_PZ_2_Static.exe" /INCREMENTAL /NOLOGO OS_PZ_2_LIB.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Олег\Documents\Visual Studio 2012\Projects\OperatingSystems\OS_PZ_2_Static\Debug\OS_PZ_2_Static.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Олег\Documents\Visual Studio 2012\Projects\OperatingSystems\OS_PZ_2_Static\Debug\OS_PZ_2_Static.lib" /MACHINE:X86 Debug\OS_PZ_2_Static.res
+         Debug\OS_PZ_2_Static.obj
+         Debug\stdafx.obj
+            Creating library C:\Users\Олег\Documents\Visual Studio 2012\Projects\OperatingSystems\OS_PZ_2_Static\Debug\OS_PZ_2_Static.lib and object C:\Users\Олег\Documents\Visual Studio 2012\Projects\OperatingSystems\OS_PZ_2_Static\Debug\OS_PZ_2_Static.exp
+         OS_PZ_2_Static.vcxproj -> C:\Users\Олег\Documents\Visual Studio 2012\Projects\OperatingSystems\OS_PZ_2_Static\Debug\OS_PZ_2_Static.exe
+     1>Done Building Project "C:\Users\Олег\Documents\Visual Studio 2012\Projects\OperatingSystems\OS_PZ_2_Static\OS_PZ_2_Static\OS_PZ_2_Static.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.83
