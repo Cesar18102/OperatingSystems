@@ -48,9 +48,18 @@ BigInt BigInt::operator + (BigInt B) {
 	bool Greater = B.digitsCount > digitsCount;
 
 	if(B.digitsCount == digitsCount)
-		for(int i = MaxDigitsCount - 1; i >= 0; i--)
-			if((i >= B.digitsCount? 0 : B.digits[i]) > (i >= digitsCount? 0 : digits[i]))
+		for(int i = MaxDigitsCount - 1; i >= 0; i--) {
+
+			short DB = i >= B.digitsCount? 0 : B.digits[i];
+			short DT = i >= digitsCount? 0 : digits[i];
+			if(DB > DT) {
+
 				Greater = true;
+				break;
+
+			} else if(DB < DT) 
+				break;
+		}
 
 	if(Greater)
 		return B + *this;
@@ -112,12 +121,34 @@ BigInt BigInt::operator - (BigInt B) {
 BigInt BigInt::operator * (BigInt B) {
 
 	bool NewMinus = B.minus ^ minus;
-	//BigInt* Multis = new BigInt[B.digitsCount];
+	BigInt* Multis = new BigInt[B.digitsCount];
 
-	//for(int i = 0; i < 
+	for(int i = 0; i < B.digitsCount; i++) {
 
+		int L = digitsCount + i + 1;
+		short* Multi = new short[L];
 
-	return B;
+		for(int j = 0; j < L; Multi[j++] = 0);
+
+		for(int j = 0; j < digitsCount; j++) {
+
+			short M = B.digits[i] * digits[j];
+			Multi[j + i] = M % 10;
+			Multi[j + i + 1] = M / 10;
+		}
+
+		while(L > 1 && Multi[L - 1] == 0)
+			L--;
+
+		Multis[i] = BigInt(Multi, L, false);
+	}
+
+	BigInt Result = Multis[0];
+	for(int i = 1; i < B.digitsCount; i++)
+		Result = Result + Multis[i];
+
+	Result.minus = NewMinus;
+	return Result;
 }
 
 BigInt BigInt::operator / (BigInt B) {

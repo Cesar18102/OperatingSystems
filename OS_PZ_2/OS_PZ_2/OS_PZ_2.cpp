@@ -8,6 +8,7 @@ int _tmain(int argc, _TCHAR* argv[]) {
 
 	std::cout << A << " + " << B << " = " << (A + B) << std::endl;
 	std::cout << A << " - " << B << " = " << (A - B) << std::endl;
+	std::cout << A << " * " << B << " = " << (A * B) << std::endl;
 	
 	system("pause");
 	return 0;
