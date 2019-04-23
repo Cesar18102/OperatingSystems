@@ -131,10 +131,10 @@ BigInt BigInt::operator * (BigInt B) {
 		for(int j = 0; j < L; Multi[j++] = 0);
 
 		for(int j = 0; j < digitsCount; j++) {
-
+			
 			short M = B.digits[i] * digits[j];
-			Multi[j + i] = M % 10;
-			Multi[j + i + 1] = M / 10;
+			Multi[j + i] += M % 10;
+			Multi[j + i + 1] += M / 10;
 		}
 
 		while(L > 1 && Multi[L - 1] == 0)

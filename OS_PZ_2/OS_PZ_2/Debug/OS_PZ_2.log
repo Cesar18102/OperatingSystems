@@ -1,4 +1,4 @@
-﻿Build started 23.04.2019 15:15:04.
+﻿Build started 23.04.2019 15:32:58.
      1>Project "C:\Users\Олег\Documents\Visual Studio 2012\Projects\OperatingSystems\OS_PZ_2\OS_PZ_2\OS_PZ_2.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          D:\!!!OLEG\Software\VS2012\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _CRT_SECURE_NO_WARNINGS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\OS_PZ_2.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt BigInt.cpp
@@ -14,4 +14,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.42
+Time Elapsed 00:00:00.40
