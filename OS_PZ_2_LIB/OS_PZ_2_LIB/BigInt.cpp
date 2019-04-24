@@ -15,13 +15,6 @@ BigInt BigInt::GetBigInt(TCHAR* ds) {
 	return BigInt(a, L - S, minus);
 }
 
-BigInt BigInt::ReadBigInt() {
-
-	TCHAR* a = new TCHAR[256];
-	Read("%s", a);
-	return GetBigInt(a);
-}
-
 BigInt::BigInt() { }
 
 BigInt::BigInt(short* digits, long long len, bool minus) {
@@ -32,10 +25,6 @@ BigInt::BigInt(short* digits, long long len, bool minus) {
 
 	for(int i = 0; i < len; i++)
 		this->digits[i] = digits[i];
-}
-
-BigInt::~BigInt() {
-
 }
 
 BigInt BigInt::operator + (BigInt B) {
@@ -172,6 +161,12 @@ std::ostream& operator << (std::ostream& os, const BigInt& B) {
 }
 
 void BigInt::print() {
+
+	if(digitsCount == 0)
+		return;
+
+	if(minus && digits[digitsCount - 1] != 0)
+		std::cout << '-';
 
 	for(int i = digitsCount - 1; i >= 0; i--)
 		std::cout << digits[i];
