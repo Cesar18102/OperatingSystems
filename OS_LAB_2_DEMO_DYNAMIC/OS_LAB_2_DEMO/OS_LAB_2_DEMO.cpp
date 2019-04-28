@@ -1,14 +1,6 @@
 #include "stdafx.h"
 #define uint unsigned
 
-#ifdef UNICODE
-#define Length lstrlenW
-#define TCHARMAX WCHAR_MAX
-#else
-#define Length strlen
-#define TCHARMAX CHAR_MAX
-#endif
-
 typedef uint (*GetEncryptAndDecryptKeys)(uint* E, uint* D);
 typedef uint (*Encrypt)(TCHAR* Msg, uint E, uint n, uint* EncMsg);
 typedef void (*Decrypt)(uint* Msg, uint L, uint D, uint n, TCHAR* DecMsg);

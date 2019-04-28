@@ -1,14 +1,16 @@
-﻿Build started 27.04.2019 19:01:03.
-     1>Project "C:\Users\Олег\documents\visual studio 2012\Projects\OS_LAB_2_DEMO\OS_LAB_2_DEMO\OS_LAB_2_DEMO.vcxproj" on node 2 (Build target(s)).
+﻿Build started 28.04.2019 12:12:44.
+     1>Project "C:\Users\Олег\Documents\Visual Studio 2012\Projects\OperatingSystems\OS_LAB_2_DEMO_DYNAMIC\OS_LAB_2_DEMO\OS_LAB_2_DEMO.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
+         D:\!!!OLEG\Software\VS2012\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _CRT_SECURE_NO_WARNINGS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\OS_LAB_2_DEMO.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
          D:\!!!OLEG\Software\VS2012\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _CRT_SECURE_NO_WARNINGS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\OS_LAB_2_DEMO.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt OS_LAB_2_DEMO.cpp
          OS_LAB_2_DEMO.cpp
        Link:
-         D:\!!!OLEG\Software\VS2012\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Олег\documents\visual studio 2012\Projects\OS_LAB_2_DEMO\Debug\OS_LAB_2_DEMO.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Олег\documents\visual studio 2012\Projects\OS_LAB_2_DEMO\Debug\OS_LAB_2_DEMO.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Олег\documents\visual studio 2012\Projects\OS_LAB_2_DEMO\Debug\OS_LAB_2_DEMO.lib" /MACHINE:X86 Debug\OS_LAB_2_DEMO.obj
+         D:\!!!OLEG\Software\VS2012\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Олег\Documents\Visual Studio 2012\Projects\OperatingSystems\OS_LAB_2_DEMO_DYNAMIC\Debug\OS_LAB_2_DEMO.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Олег\Documents\Visual Studio 2012\Projects\OperatingSystems\OS_LAB_2_DEMO_DYNAMIC\Debug\OS_LAB_2_DEMO.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Олег\Documents\Visual Studio 2012\Projects\OperatingSystems\OS_LAB_2_DEMO_DYNAMIC\Debug\OS_LAB_2_DEMO.lib" /MACHINE:X86 Debug\OS_LAB_2_DEMO.obj
          Debug\stdafx.obj
-         OS_LAB_2_DEMO.vcxproj -> C:\Users\Олег\documents\visual studio 2012\Projects\OS_LAB_2_DEMO\Debug\OS_LAB_2_DEMO.exe
-     1>Done Building Project "C:\Users\Олег\documents\visual studio 2012\Projects\OS_LAB_2_DEMO\OS_LAB_2_DEMO\OS_LAB_2_DEMO.vcxproj" (Build target(s)).
+         OS_LAB_2_DEMO.vcxproj -> C:\Users\Олег\Documents\Visual Studio 2012\Projects\OperatingSystems\OS_LAB_2_DEMO_DYNAMIC\Debug\OS_LAB_2_DEMO.exe
+     1>Done Building Project "C:\Users\Олег\Documents\Visual Studio 2012\Projects\OperatingSystems\OS_LAB_2_DEMO_DYNAMIC\OS_LAB_2_DEMO\OS_LAB_2_DEMO.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.60
+Time Elapsed 00:00:05.74
