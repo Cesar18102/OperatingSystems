@@ -54,7 +54,6 @@ DWORD GetControlSumForFile(TCHAR* filename) {
 
 int _tmain(int argc, _TCHAR* argv[]) {
 
-	DWORD d = GetControlSumForFile(_T("test.txt"));
-	system("pause");
+	DWORD d = GetControlSumForFile(_T("../OS_PZ_3_DLL.dll"));
 	return 0;
 }

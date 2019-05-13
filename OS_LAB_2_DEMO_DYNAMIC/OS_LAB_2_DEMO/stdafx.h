@@ -9,11 +9,11 @@
 #include <random>
 
 #ifdef UNICODE
-#define Read wscanf
-#define Print wprintf
-#define Length lstrlenW
+#define Read_ wscanf
+#define Print_ wprintf
+#define Length_ lstrlenW
 #else
-#define Read scanf
-#define Print printf
-#define Length strlen
+#define Read_ scanf
+#define Print_ printf
+#define Length_ strlen
 #endif

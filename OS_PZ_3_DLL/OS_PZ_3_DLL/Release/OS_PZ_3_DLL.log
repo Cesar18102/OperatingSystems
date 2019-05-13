@@ -1,0 +1,16 @@
+﻿Build started 12.05.2019 23:25:33.
+     1>Project "c:\Users\Олег\documents\visual studio 2012\Projects\OS_PZ_3_DLL\OS_PZ_3_DLL\OS_PZ_3_DLL.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         OS_PZ_3_DLL.vcxproj -> c:\users\олег\documents\visual studio 2012\Projects\OS_PZ_3_DLL\Release\OS_PZ_3_DLL.dll
+       PostBuildEvent:
+         "c:\users\олег\documents\visual studio 2012\Projects\OS_PZ_3_DLL\Release\OS_PZ_3.exe"
+         :VCEnd
+         ""c:\users\олег\documents\visual studio 2012\Projects\OS_PZ_3_DLL\Release\OS_PZ_3.exe"" не является внутренней или внешней
+         командой, исполняемой программой или пакетным файлом.
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\Microsoft.CppCommon.targets(134,5): error MSB3073: The command ""c:\users\олег\documents\visual studio 2012\Projects\OS_PZ_3_DLL\Release\OS_PZ_3.exe"
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\Microsoft.CppCommon.targets(134,5): error MSB3073: :VCEnd" exited with code 9009.
+     1>Done Building Project "c:\Users\Олег\documents\visual studio 2012\Projects\OS_PZ_3_DLL\OS_PZ_3_DLL\OS_PZ_3_DLL.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.08

@@ -1,4 +1,7 @@
 #include "stdafx.h"
+#include "resource.h"
+#include <atlstr.h>
+
 #define uint unsigned
 
 typedef uint (*GetEncryptAndDecryptKeys)(uint* E, uint* D);
@@ -21,12 +24,42 @@ int _tmain(int argc, _TCHAR* argv[]) {
 	uint* EncMsg = new uint[256];
 	TCHAR* DecMsg = new TCHAR[256];
 
-	Read(_T("%s"), Msg);
+	Print_(_T("%s"), _T("Select language: Russian(R) or English(E): "));
+
+	char* lang = new char();
+	int LANG = LANG_ENGLISH;
+
+	Read_(_T("%c"), lang);
+
+	if(*lang == 'R' || *lang == 'r') {
+
+		setlocale(LC_ALL, "Russian");
+		LANG = LANG_RUSSIAN;
+
+	} else if(*lang == 'E' || *lang == 'e') {
+
+		setlocale(LC_ALL, "English");
+		LANG = LANG_ENGLISH;
+	}
+
+	HMODULE mod = GetModuleHandle(NULL);
+	CString str = CString();
+
+	str.LoadStringW(mod, Input, LANG);
+	Print_(_T("%s: "), str);
+	Read_(_T("%s"), Msg);
 	
 	uint L = Enc(Msg, *E, n, EncMsg);
+
+	str.LoadStringW(mod, Encode, LANG);
+	Print_(_T("%s: "), str);
+	Print_(_T("%d\n"), EncMsg);
+
 	Dec(EncMsg, L, *D, n, DecMsg);
 
-	Print(_T("%s\n"), DecMsg);
+	str.LoadStringW(mod, Output, LANG);
+	Print_(_T("%s: "), str);
+	Print_(_T("%s\n"), DecMsg);
 
 	system("pause");
 	return 0;
