@@ -41,7 +41,7 @@ void Message::GetBytes(PBYTE Buffer) {
 	if(sizeof(TCHAR) == sizeof(wchar_t)) {
 
 		Data = new char[MessageSize];
-		WideCharToMultiByte(CP_ACP, 0, MessageText, MessageSize, Data, MessageSize, NULL, NULL);
+		WideCharToMultiByte(CP_ACP, 0, (wchar_t*)MessageText, MessageSize, Data, MessageSize, NULL, NULL);
 	} 
 	else
 		Data = (char*)MessageText;
@@ -79,6 +79,11 @@ Mailbox& Mailbox::operator -= (DWORD Id) {
 }
 
 void Mailbox::Clear() {  this->MessageCount = 0; }
+
+DWORD Mailbox::GetMessageSize(DWORD id) {
+
+	return Messages[id].GetMessageSize();
+}
 
 void Mailbox::ReadMessage(TCHAR *Buffer, DWORD Id) {
 
@@ -218,7 +223,9 @@ Mailbox Mailbox::Load(TCHAR *Filename) {
 		TCHAR* MESSAGE_TEXT = new TCHAR[MESSAGE_SIZE];
 
 		if(sizeof(TCHAR) == sizeof(wchar_t))
-			MultiByteToWideChar(CP_ACP, 0, (char*)MESSAGE_DATA, MESSAGE_SIZE, MESSAGE_TEXT, MESSAGE_SIZE);
+			MultiByteToWideChar(CP_ACP, 0, (char*)MESSAGE_DATA, MESSAGE_SIZE, (wchar_t*)MESSAGE_TEXT, MESSAGE_SIZE);
+		else
+			MESSAGE_TEXT = (TCHAR*)MESSAGE_DATA;
 
 		MESSAGE_TEXT[MESSAGE_SIZE] = _T('\0');
 

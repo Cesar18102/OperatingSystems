@@ -12,7 +12,6 @@ class Message {
 		DWORD GetMessageSize();
 		DWORD GetDataSize();
 
-
 	private:
 		size_t MAX_SIZE;
 		DWORD MessageSize;
@@ -29,6 +28,7 @@ class Mailbox {
 		void ReadMessage(TCHAR *Buffer, DWORD Id); 
 		DWORD GetMessagesCount();
 		DWORD GetDataSize();
+		DWORD GetMessageSize(DWORD id);
 		void GetBytes(PBYTE Buffer);
 		void Clear(); 
 		void Save();
