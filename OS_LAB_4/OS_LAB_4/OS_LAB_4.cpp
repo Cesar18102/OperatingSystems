@@ -25,18 +25,15 @@ int GetRegionsList(REGION *Regs){
 	DWORD _Align = SysInfo.dwAllocationGranularity; 
 
 	int count = 0;
-	//int index = 0;
 	for (DWORD i = StartAddress; i < EndAddress; count++){ 
 
 		REGION Item = REGION();
 		VirtualQueryEx(h, (LPVOID)i, &MemBsInfo, sizeof(MemBsInfo)); 
 
-		Item.Address = MemBsInfo.BaseAddress; //AllocationBase
+		Item.Address = MemBsInfo.BaseAddress;
 		Item.Size = Align(MemBsInfo.RegionSize, _Align); 
 		Item.State = MemBsInfo.State; 
 
-		//if(Regs[index].State == MEM_FREE)
-			//Regs[count++] = Item; 
 		Regs[count] = Item;
 		i += Item.Size; 
 	}
@@ -76,6 +73,100 @@ void MemFree(void *Mem, int Size) {
 	VirtualFreeEx(h, Mem, Size, MEM_RELEASE);
 }
 
+typedef struct { 
+	PVOID va, fa; 
+} PAGE; 
+
+PVOID AddPage(PVOID fa[], size_t faCount, PAGE *Pages, int PageCount, PAGE *Page) { 
+
+	BOOL bFind = FALSE; 
+	PAGE Item = PAGE(); 
+	for (int i = 0; i < PageCount; i++) { 
+		Item = Pages[i]; 
+		if (Item.va == Page->va) { 
+			Page->fa = Item.fa; 
+
+			for(int j = PageCount - 1; j > i; j--)
+				Pages[j - 1] = Pages[j];
+			PageCount--;
+
+			bFind = TRUE; 
+			break; 
+		} 
+	}
+
+	if (!bFind) { 
+		if (PageCount == faCount) {
+			Item = Pages[0];
+			Page->fa = Item.fa;
+
+			for(int j = PageCount - 1; j > 0; j--)
+				Pages[j - 1] = Pages[j];
+			PageCount--;
+		} else
+			Page->fa = fa[PageCount]; 
+	} 
+
+	Pages[PageCount++] = *Page;
+	return Page->fa;
+}
+
+int GetCacheNumber(int p[4], int n) {
+
+	static int flags; 
+	int RetValue = -1; 
+
+	for(int i = 0; i < 4; ++i) { 
+		if(p[i] == n) { 
+			if(i < 2) { 
+
+				flags |=1; 
+
+				if(i & 1) 
+					flags &= ~2;
+				else 
+					flags |= 2; 
+
+			} else { 
+
+				flags &= ~1; 
+
+				if(i & 1) 
+					flags &= ~4;
+				else 
+					flags |= 4; 
+			} 
+			RetValue = i; 
+		} 
+	} 
+	
+	if(RetValue == -1) { 
+		if(flags & 1) { 
+
+			if(flags & 4) 
+				RetValue = 3;
+			else 
+				RetValue = 2;
+
+			flags ^=4;
+
+		} else { 
+
+			if(flags & 2) 
+				RetValue = 1;
+			else 
+				RetValue = 0;
+
+			flags ^=2;
+		}
+
+		flags ^=1; 
+		p[RetValue] = n; 
+	}
+
+	printf("%d\t%d %d %d\t%d\n", n, flags & 1, (flags>> 1) &1, (flags>> 2) &1, RetValue); 
+	return RetValue; 
+}
 
 int _tmain(int argc, _TCHAR* argv[]) {
 
