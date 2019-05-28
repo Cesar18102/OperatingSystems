@@ -1,15 +1,15 @@
-﻿Build started 24.05.2019 20:12:46.
-     1>Project "C:\Users\Олег\Documents\Visual Studio 2012\Projects\OS_PZ_4\OS_PZ_4\OS_PZ_4.vcxproj" on node 2 (Build target(s)).
+﻿Build started 28.05.2019 13:07:26.
+     1>Project "C:\Users\Олег\Documents\Visual Studio 2012\Projects\OperatingSystems\OS_PZ_4\OS_PZ_4\OS_PZ_4.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          D:\!!!OLEG\Software\VS2012\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\OS_PZ_4.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt OS_PZ_4.cpp
          OS_PZ_4.cpp
-     1>c:\users\олег\documents\visual studio 2012\projects\os_pz_4\os_pz_4\os_pz_4.cpp(15): warning C4091: 'typedef ' : ignored on left of 'PROCESS' when no variable is declared
+     1>c:\users\олег\documents\visual studio 2012\projects\operatingsystems\os_pz_4\os_pz_4\os_pz_4.cpp(17): warning C4091: 'typedef ' : ignored on left of 'PROCESS' when no variable is declared
        Link:
-         D:\!!!OLEG\Software\VS2012\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Олег\Documents\Visual Studio 2012\Projects\OS_PZ_4\Debug\OS_PZ_4.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Олег\Documents\Visual Studio 2012\Projects\OS_PZ_4\Debug\OS_PZ_4.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Олег\Documents\Visual Studio 2012\Projects\OS_PZ_4\Debug\OS_PZ_4.lib" /MACHINE:X86 Debug\OS_PZ_4.obj
+         D:\!!!OLEG\Software\VS2012\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Олег\Documents\Visual Studio 2012\Projects\OperatingSystems\OS_PZ_4\Debug\OS_PZ_4.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Олег\Documents\Visual Studio 2012\Projects\OperatingSystems\OS_PZ_4\Debug\OS_PZ_4.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Олег\Documents\Visual Studio 2012\Projects\OperatingSystems\OS_PZ_4\Debug\OS_PZ_4.lib" /MACHINE:X86 Debug\OS_PZ_4.obj
          Debug\stdafx.obj
-         OS_PZ_4.vcxproj -> C:\Users\Олег\Documents\Visual Studio 2012\Projects\OS_PZ_4\Debug\OS_PZ_4.exe
-     1>Done Building Project "C:\Users\Олег\Documents\Visual Studio 2012\Projects\OS_PZ_4\OS_PZ_4\OS_PZ_4.vcxproj" (Build target(s)).
+         OS_PZ_4.vcxproj -> C:\Users\Олег\Documents\Visual Studio 2012\Projects\OperatingSystems\OS_PZ_4\Debug\OS_PZ_4.exe
+     1>Done Building Project "C:\Users\Олег\Documents\Visual Studio 2012\Projects\OperatingSystems\OS_PZ_4\OS_PZ_4\OS_PZ_4.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.21
+Time Elapsed 00:00:02.20
