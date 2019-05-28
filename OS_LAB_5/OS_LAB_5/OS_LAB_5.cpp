@@ -33,11 +33,13 @@ void PrintProcessInfo(STARTUPINFO StUpInfo, PROCESS_INFORMATION PI) {
 
 int _tmain(int argc, _TCHAR* argv[]) {
 
+	const bool ASCII = false;
+
 	STARTUPINFO StUpInfo1;
 	ZeroMemory(&StUpInfo1, sizeof(STARTUPINFO));
 	PROCESS_INFORMATION PI1;
 
-	_CreateProcess(_T("..\\Debug\\Task1.exe"), _T(""), StUpInfo1, PI1);
+	_CreateProcess(_T("..\\Debug\\Task1.exe"), (ASCII ? _T("/A") : _T("/W")), StUpInfo1, PI1);
 	Sleep(50);
 	PrintProcessInfo(StUpInfo1, PI1);
 	WaitForSingleObject(PI1.hProcess, INFINITE);
@@ -47,7 +49,7 @@ int _tmain(int argc, _TCHAR* argv[]) {
 	ZeroMemory(&StUpInfo2, sizeof(STARTUPINFO));
 	PROCESS_INFORMATION PI2;
 
-	_CreateProcess(_T("..\\Debug\\Task2.exe"), _T(""), StUpInfo2, PI2);
+	_CreateProcess(_T("..\\Debug\\Task2.exe"), (ASCII ? _T("/A") : _T("/W")), StUpInfo2, PI2);
 	Sleep(10);
 	PrintProcessInfo(StUpInfo2, PI2);
 
